@@ -35,10 +35,7 @@ colNames
 str(mergedData)
 
 ## 3. Extracting only the measurements on the mean and standard deviation for each measurement.
-tidyData <- mergedData %>% select(subjectId, activityId, contains("mean"), contains("std"))
-colnames(tidyData)
-
-# Create vector for defining Id's, mean and standard deviation
+# Create a vector for defining Id's, mean and standard deviation
 mean_and_std <- (grepl("subjectId" , colNames) | 
                          grepl("activityId" , colNames) | 
                          grepl("[Mm]ean" , colNames) | 
