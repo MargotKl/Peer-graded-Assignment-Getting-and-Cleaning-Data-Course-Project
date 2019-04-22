@@ -3,7 +3,7 @@ code book
 that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md.
 
 <b>Structure of dataframe: tidyDataAverage </b><BR>
-'data.frame':	180 obs. of  88 variables:
+<small>'data.frame':	180 obs. of  88 variables:<BR>
  $ subjectId                                      : int  1 1 1 1 1 1 2 2 2 2 ...<BR>
  $ activity                                       : Factor w/ 6 levels "LAYING","SITTING",..: 1 2 3 4 5 6 1 2 3 4 ...<BR>
  $ TimeBodyAccelerometerMeanX                     : num  0.222 0.261 0.279 0.277 0.289 ...<BR>
@@ -91,4 +91,4 @@ that describes the variables, the data, and any transformations or work that you
  $ AngleTimeBodyGyroscopeJerkMeangravityMean      : num  0.0844 -0.0649 -0.0279 -0.0187 -0.04 ...<BR>
  $ AngleXgravityMean                              : num  0.427 -0.591 -0.743 -0.729 -0.744 ...<BR>
  $ AngleYgravityMean                              : num  -0.5203 -0.0605 0.2702 0.277 0.2672 ...<BR>
- $ AngleZgravityMean                              : num  -0.3524 -0.218 0.0123 0.0689 0.065 ...<BR>
+ $ AngleZgravityMean                              : num  -0.3524 -0.218 0.0123 0.0689 0.065 ...<BR></small>
