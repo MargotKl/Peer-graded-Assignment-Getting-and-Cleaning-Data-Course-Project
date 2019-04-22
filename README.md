@@ -14,12 +14,7 @@ Experiments have been carried out with a group of 30 volunteers within an age br
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
 <b>Attribute Information</b><BR>
-For each record in the dataset it is provided: 
-- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
-- Triaxial Angular velocity from the gyroscope. 
-- A 561-feature vector with time and frequency domain variables. 
-- Its activity label. 
-- An identifier of the subject who carried out the experiment.
+For each record in the dataset a 561-feature vector with time and frequency domain variables is provided with an identifier of the subject who carried out the experiment and the activity performmed.
 
 A full description is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones <BR>
 The zip file containing the source data is located at: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -31,7 +26,7 @@ The R script run_analysis.R encompasses the following steps:
 3. Extracts only the measurements on the mean and standard deviation for each measurement.
 4. Uses descriptive activity names to name the activities in the data set
 5. Appropriately labels the data set with descriptive variable names.
-6. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity       and each subject.
+6. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 7. Write the data set to the tidyDataAverage.txt file.
 
 The tidyDataAverage.txt in this repository was created by running the run_analysis.R script using R version 3.5.3 (2019-03-11) on macOS Mojave Version 10.14.4.
