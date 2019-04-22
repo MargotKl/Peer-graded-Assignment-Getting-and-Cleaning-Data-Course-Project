@@ -34,7 +34,7 @@ colNames <- colnames(mergedData)
 colNames
 str(mergedData)
 
-## 3. Extracting only the measurements on the mean and standard deviation for each measurement
+## 3. Extracting only the measurements on the mean and standard deviation for each measurement.
 tidyData <- mergedData %>% select(subjectId, activityId, contains("mean"), contains("std"))
 colnames(tidyData)
 
@@ -49,13 +49,13 @@ mean_and_std <- (grepl("subjectId" , colNames) |
 tidyDataMeanStd <- mergedData[ ,mean_and_std == TRUE]
 colnames(tidyDataMeanStd)
 
-## 4. Using descriptive activity names to name the activities in the data set
+## 4. Using descriptive activity names to name the activities in the data set.
 tidyDataMeanStd$activityId <- activity_labels[tidyDataMeanStd$activityId, 2]
 # Order data by SubjectId, ActivityId
 tidyDataMeanStd <- tidyDataMeanStd[order(tidyDataMeanStd$subjectId, tidyDataMeanStd$activityId),]
 str(tidyDataMeanStd)
 
-## 5. Appropriately labels the data set with descriptive variable names
+## 5. Appropriately labels the data set with descriptive variable names.
 names(tidyDataMeanStd)[2] = "activity"
 names(tidyDataMeanStd)<-gsub("Acc", "Accelerometer", names(tidyDataMeanStd))
 names(tidyDataMeanStd)<-gsub("Gyro", "Gyroscope", names(tidyDataMeanStd))
@@ -68,11 +68,11 @@ names(tidyDataMeanStd)<-gsub("angle", "Angle", names(tidyDataMeanStd))
 colnames(tidyDataMeanStd)
 View(tidyDataMeanStd)
 
-## 6. Creating a second, independent tidy data set from dataset in step 4with the average 
+## 6. Creating a second, independent tidy data set from dataset in step 4with the average.
 # of each variable for each activity and each subject
 tidyDataAverage <- aggregate(.~subjectId + activity, tidyDataMeanStd, mean)
 tidyDataAverage <- tidyDataAverage[order(tidyDataAverage$subjectId, tidyDataAverage$activity),]
 str(tidyDataAverage)
 
-## 7. Writing second tidy data set in txt file
+## 7. Writing second tidy data set in txt file.
 write.table(tidyDataAverage, "tidyDataAverage.txt", row.name=FALSE)
