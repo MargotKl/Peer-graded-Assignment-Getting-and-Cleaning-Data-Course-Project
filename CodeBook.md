@@ -5,12 +5,16 @@ The code book describes the variables, the data, and any transformations or work
 <b>Data</b><BR>
 The tidyDataAverage.txt data file is a text file, with space-separated values. The first row contains the names of the variables.
 
-<b>Identifiers</b><BR>
-subjectId: subject identifier, integer, ranges from 1 to 30 <BR>
-activity: factor with 6 levels: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING<BR>
+
+
 
 <b>Variables</b><BR>
  Each row contains, for a given subject and activity, 86 averaged signal measurements (mean or standard deviation). <BR>
+ 
+ <i>Identifiers</i><BR>
+ subjectId: subject identifier, integer, ranges from 1 to 30 <BR>
+ activity: factor with 6 levels: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING<BR>
+ 
 <b>Structure of dataframe: tidyDataAverage </b><BR>
 <font size="2">'data.frame':	180 obs. of  88 variables:<BR>
  $ subjectId                                      : int  1 1 1 1 1 1 2 2 2 2 ...<BR>
