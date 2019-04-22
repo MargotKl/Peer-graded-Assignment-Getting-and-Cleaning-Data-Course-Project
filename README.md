@@ -19,14 +19,13 @@ Project data set: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2
 
 <b>R script: run_analysis.R</b><BR>
 The R script run_analysis.R encompasses the following steps:
-1. Download and unzip source data if it doesn't exist. 
-2. Read data.
-3. Merges the training and the test sets to create one data set.
-4. Extracts only the measurements on the mean and standard deviation for each measurement.
-5. Uses descriptive activity names to name the activities in the data set
-6. Appropriately labels the data set with descriptive variable names.
-7. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity       and each subject.
-8. Write the data set to the tidyDataAverage.txt file.
+1. Check if data set exists and if not download and unzip file.
+2. Merges the training and the test sets to create one data set.
+3. Extracts only the measurements on the mean and standard deviation for each measurement.
+4. Uses descriptive activity names to name the activities in the data set
+5. Appropriately labels the data set with descriptive variable names.
+6. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity       and each subject.
+7. Write the data set to the tidyDataAverage.txt file.
 
 The tidyDataAverage.txt in this repository was created by running the run_analysis.R script using R version 3.5.3 (2019-03-11) on macOS Mojave Version 10.14.4.
 
