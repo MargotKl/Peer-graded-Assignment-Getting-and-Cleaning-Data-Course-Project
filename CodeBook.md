@@ -1,6 +1,8 @@
 <b><h1>Code book</b></h1>
 
-that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md.
+The code book describes the variables, the data, and any transformations or work that were performed to clean up the data.
+
+
 
 <b>Structure of dataframe: tidyDataAverage </b><BR>
 <font size="2">'data.frame':	180 obs. of  88 variables:<BR>
