@@ -6,7 +6,7 @@ Variables
 
 Each row contains, for a given subject and activity, 79 averaged signal measurements.
 
-<b>Identifiers<\b><BR>
+<b>Identifiers</b><BR>
 subjectId: subject identifier, integer, ranges from 1 to 30 <BR>
 activity: factor with 6 levels: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING<BR>
 
