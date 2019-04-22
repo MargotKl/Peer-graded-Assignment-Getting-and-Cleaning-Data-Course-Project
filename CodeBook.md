@@ -8,9 +8,9 @@ The tidyDataAverage.txt data file is a text file, with space-separated values. T
 
 
 
-<b>Variables of tidyDataAverage</b><BR>
+<b>Variables</b><BR>
+ The data set tidyDataAverage has 180 observations of 88 variables.
  Each row contains, for a given subject and activity, 86 averaged signal measurements (mean or standard deviation). <BR>
- tidyDataAverage has 180 observations of 88 variables.
  
  <i>Identifiers</i><BR>
  subjectId: subject identifier, integer, ranges from 1 to 30 <BR>
