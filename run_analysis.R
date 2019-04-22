@@ -41,8 +41,8 @@ colnames(tidyData)
 # Create vector for defining Id's, mean and standard deviation
 mean_and_std <- (grepl("subjectId" , colNames) | 
                          grepl("activityId" , colNames) | 
-                         grepl("[Mm]ean." , colNames) | 
-                         grepl("std.." , colNames) 
+                         grepl("[Mm]ean" , colNames) | 
+                         grepl("std" , colNames) 
 )
 
 # Making nessesary subset from mergedData
