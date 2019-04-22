@@ -2,7 +2,7 @@ code book
 
 that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md.
 
-<b>Structure of dataframe: tidyDataAverage <b>
+<b>Structure of dataframe: tidyDataAverage </b><BR>
 'data.frame':	180 obs. of  88 variables:
  $ subjectId                                      : int  1 1 1 1 1 1 2 2 2 2 ...
  $ activity                                       : Factor w/ 6 levels "LAYING","SITTING",..: 1 2 3 4 5 6 1 2 3 4 ...
