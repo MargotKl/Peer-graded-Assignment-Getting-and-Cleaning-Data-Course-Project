@@ -2,7 +2,8 @@
 
 The code book describes the variables, the data, and any transformations or work that were performed to clean up the data.
 
-
+<b>Data</b><BR>
+The tidyDataAverage.txt data file is a text file, with space-separated values. The first row contains the names of the variables.
 
 
 <b>Identifiers</b><BR>
