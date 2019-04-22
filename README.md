@@ -18,4 +18,9 @@ The R script called run_analysis.R does the following:
 3. Uses descriptive activity names to name the activities in the data set
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity       and each subject.
+6. Write the data set to the tidyDataAverage.txt file.
+
+The tidyDataAverage.txt in this repository was created by running the run_analysis.R script using R version 3.5.3 (2019-03-11) on macOS Mojave Version 10.14.4.
+
+The script requires the dplyr package (version 0.8.0.1 was used).
 
