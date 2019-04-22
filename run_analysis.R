@@ -1,19 +1,18 @@
-## 1. Checking if data set exists and if not unzip file 
+## 1. Checking if data set exists and if not download and unzip file (in working directory).
 filename <- "getdata-projectfiles-UCI HAR Dataset.zip"
 
-## Checking if file is already downloaded
+# Checking if file is already downloaded
 if (!file.exists(filename)){
         fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
         download.file(fileUrl, filename, method="curl")
 }  
 
-## Checking if data set exists and if not unzip file 
+# Checking if data set exists and if not unzip file 
 if (!file.exists("UCI HAR Dataset")) { 
         unzip(filename) 
 }
 
-
-## 1. Merging the training and the test sets to create one data set.
+## 2. Merging the training and the test sets to create one data set.
 # Assigning dataframes to the textfiles and assigning columnnames to dataframes
 features <- read.table("UCI HAR Dataset/features.txt", col.names = c("n","functions"))
 activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt", col.names = c("activityId", "activity"))
@@ -35,7 +34,7 @@ colNames <- colnames(mergedData)
 colNames
 str(mergedData)
 
-## 2. Extracting only the measurements on the mean and standard deviation for each measurement
+## 3. Extracting only the measurements on the mean and standard deviation for each measurement
 tidyData <- mergedData %>% select(subjectId, activityId, contains("mean"), contains("std"))
 colnames(tidyData)
 
@@ -50,14 +49,14 @@ mean_and_std <- (grepl("subjectId" , colNames) |
 tidyDataMeanStd <- mergedData[ ,mean_and_std == TRUE]
 colnames(tidyDataMeanStd)
 
-## 3. Using descriptive activity names to name the activities in the data set
+## 4. Using descriptive activity names to name the activities in the data set
 tidyDataMeanStd$activityId <- activity_labels[tidyDataMeanStd$activityId, 2]
 # Order data by SubjectId, ActivityId
 tidyDataMeanStd <- tidyDataMeanStd[order(tidyDataMeanStd$subjectId, tidyDataMeanStd$activityId),]
 str(tidyDataMeanStd)
 
 
-## 4. Appropriately labels the data set with descriptive variable names
+## 5. Appropriately labels the data set with descriptive variable names
 names(tidyDataMeanStd)[2] = "activity"
 names(tidyDataMeanStd)<-gsub("Acc", "Accelerometer", names(tidyDataMeanStd))
 names(tidyDataMeanStd)<-gsub("Gyro", "Gyroscope", names(tidyDataMeanStd))
@@ -70,11 +69,11 @@ names(tidyDataMeanStd)<-gsub("angle", "Angle", names(tidyDataMeanStd))
 colnames(tidyDataMeanStd)
 View(tidyDataMeanStd)
 
-## 5. Creating a second, independent tidy data set from dataset in step 4with the average 
-##of each variable for each activity and each subject
+## 6. Creating a second, independent tidy data set from dataset in step 4with the average 
+# of each variable for each activity and each subject
 tidyDataAverage <- aggregate(.~subjectId + activity, tidyDataMeanStd, mean)
 tidyDataAverage <- tidyDataAverage[order(tidyDataAverage$subjectId, tidyDataAverage$activity),]
 str(tidyDataAverage)
 
-##Writing second tidy data set in txt file
+## 7. Writing second tidy data set in txt file
 write.table(tidyDataAverage, "tidyDataAverage.txt", row.name=FALSE)
