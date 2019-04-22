@@ -10,7 +10,7 @@ subjectId: subject identifier, integer, ranges from 1 to 30 <BR>
 activity: factor with 6 levels: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING<BR>
 
 <b>Features</b><BR>
- Each row contains, for a given subject and activity, 86 averaged signal measurements.
+ Each row contains, for a given subject and activity, 86 averaged signal measurements (mean or standard deviation). <BR>
 <b>Structure of dataframe: tidyDataAverage </b><BR>
 <font size="2">'data.frame':	180 obs. of  88 variables:<BR>
  $ subjectId                                      : int  1 1 1 1 1 1 2 2 2 2 ...<BR>
