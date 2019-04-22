@@ -37,6 +37,7 @@ colnames(tidyDataMeanStd)
 
 ## 3. Using descriptive activity names to name the activities in the data set
 tidyDataMeanStd$activityId <- activity_labels[tidyDataMeanStd$activityId, 2]
+# Order data by SubjectId, ActivityId
 tidyDataMeanStd <- tidyDataMeanStd[order(tidyDataMeanStd$subjectId, tidyDataMeanStd$activityId),]
 str(tidyDataMeanStd)
 
