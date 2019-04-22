@@ -8,7 +8,7 @@ See for location of the source data the README.md file.
 The following transformations were applied to the source data by running the R script run_analysis.R: <BR>
 - The file (if not exists) is downloaded and unzipped in the working directory.
 - Dataframes (and column names) were assigned to the text files: features, activity_labels, subject_test, X_test, y_test, subject_train, X_train and y_train.
-- The subject, training (x=7352 obs/y=1 obs. of 561 variables) and test sets (x=2947 obs./y=1 obs. of 561 variables) were merged to create one data set (TidyData: 10299 obs. of 563 variables)
+- The subject, training (x=7352 obs./y=1 obs. of 561 variables) and test sets (x=2947 obs./y=1 obs. of 561 variables) were merged to create one data set (TidyData: 10299 obs. of 563 variables)
 - The measurements on the mean and standard deviation (variable names containing the strings [Mm]ean and std) were extracted for each measurement (tidyDataMeanStd: 10299 obs. of 88 variables)
 - The activity identifiers (originally coded as integers between 1 and 6) were replaced with descriptive activity names (activity_labels)
 - The variable names were replaced with descriptive variable names (Acc=Accelerometer, Gyro=Gyroscope, BodyBody=Body, Mag=Magnitude, ^t=Time, ^f=Frequency, tBody=TimeBody, angle=Angle, mean=Mean, std=Std, dots were removed)
