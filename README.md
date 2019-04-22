@@ -21,7 +21,7 @@ The zip file containing the source data is located at: https://d396qusza40orc.cl
 
 <b>R script: run_analysis.R</b><BR>
 The R script run_analysis.R encompasses the following steps:
-1. Check if data set exists and if not download and unzip file.
+1. Checks if data set exists and if not it downloads and unzips file.
 2. Merges the training and the test sets to create one data set.
 3. Extracts only the measurements on the mean and standard deviation for each measurement.
 4. Uses descriptive activity names to name the activities in the data set
