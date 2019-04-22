@@ -5,7 +5,7 @@ The code book describes the variables, the data, and any transformations or work
 See for location of the source data the README.md file. 
 
 <b>Transformations</b><BR>
-The following transformations were applied to the source data by running run_analysis.R: <BR>
+The following transformations were applied to the source data by running the R script run_analysis.R: <BR>
 - Dataframes (and column names) were assigned to the text files: features, activity_labels, subject_test, X_test, y_test, subject_train, X_train and y_train.
 - The subject, training (x=7352 obs/y=1 obs. of 561 variables) and test sets (x=2947 obs./y=1 obs. of 561 variables) were merged to create one data set (TidyData: 10299 obs. of 563 variables)
 - The measurements on the mean and standard deviation (variable names containing the strings [Mm]ean and std) were extracted for each measurement (tidyDataMeanStd: 10299 obs. of 88 variables)
