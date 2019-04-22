@@ -55,7 +55,6 @@ tidyDataMeanStd$activityId <- activity_labels[tidyDataMeanStd$activityId, 2]
 tidyDataMeanStd <- tidyDataMeanStd[order(tidyDataMeanStd$subjectId, tidyDataMeanStd$activityId),]
 str(tidyDataMeanStd)
 
-
 ## 5. Appropriately labels the data set with descriptive variable names
 names(tidyDataMeanStd)[2] = "activity"
 names(tidyDataMeanStd)<-gsub("Acc", "Accelerometer", names(tidyDataMeanStd))
