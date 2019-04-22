@@ -1,4 +1,4 @@
-<b><h1>code book<\b></h1>
+<b><h1>Code book</b></h1>
 
 that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md.
 
