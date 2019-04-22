@@ -1,3 +1,18 @@
+## 1. Checking if data set exists and if not unzip file 
+filename <- "getdata-projectfiles-UCI HAR Dataset.zip"
+
+## Checking if file is already downloaded
+if (!file.exists(filename)){
+        fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+        download.file(fileUrl, filename, method="curl")
+}  
+
+## Checking if data set exists and if not unzip file 
+if (!file.exists("UCI HAR Dataset")) { 
+        unzip(filename) 
+}
+
+
 ## 1. Merging the training and the test sets to create one data set.
 # Assigning dataframes to the textfiles and assigning columnnames to dataframes
 features <- read.table("UCI HAR Dataset/features.txt", col.names = c("n","functions"))
