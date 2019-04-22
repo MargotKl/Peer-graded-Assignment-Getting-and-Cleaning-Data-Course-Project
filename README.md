@@ -22,7 +22,7 @@ For each record in the dataset it is provided:
 - An identifier of the subject who carried out the experiment.
 
 A full description is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones <BR>
-Project data set: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+The zip file containing the source data is located at: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 <b>R script: run_analysis.R</b><BR>
 The R script run_analysis.R encompasses the following steps:
