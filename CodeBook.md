@@ -4,25 +4,19 @@ The code book describes the variables, the data, and any transformations or work
 
 See for location of the source data the README.md file. 
 
-<b>Transformations</b>
-The following transformations were applied to the source data:
-- The training and test sets were merged to create one data set.
-- The measurements on the mean and standard deviation (i.e. signals containing the strings mean and std) were extracted for each measurement, and the others were discarded.
-- The activity identifiers (originally coded as integers between 1 and 6) were replaced with descriptive activity names (see Identifiers section).
-- The variable names were replaced with descriptive variable names (e.g. tBodyAcc-mean()-X was expanded to timeDomainBodyAccelerometerMeanX), using the following set of rules:
-- Special characters (i.e. (, ), and -) were removed
-- The initial f and t were expanded to frequencyDomain and timeDomain respectively.
-Acc, Gyro, Mag, Freq, mean, and std were replaced with Accelerometer, Gyroscope, Magnitude, Frequency, Mean, and StandardDeviation respectively.
-Replaced (supposedly incorrect as per source's features_info.txt file) BodyBody with Body.
--From the data set in step 4, the final data set was created with the average of each variable for each activity and each subject.
-- The collection of the source data and the transformations listed above were implemented by the run_analysis.R R script (see README.md file for usage instructions).
-
+<b>Transformations</b><BR>
+The following transformations were applied to the source data by running run_analysis.R: <BR>
+- Dataframes (and column names) were assigned to the text files: features, activity_labels, subject_test, X_test, y_test, subject_train, X_train and y_train.
+- The subject, training (x=7352 obs/y=1 obs. of 561 variables) and test sets (x=2947 obs./y=1 obs. of 561 variables) were merged to create one data set (TidyData: 10299 obs. of 563 variables)
+- The measurements on the mean and standard deviation (variable names containing the strings [Mm]ean and std) were extracted for each measurement (tidyDataMeanStd: 10299 obs. of 88 variables)
+- The activity identifiers (originally coded as integers between 1 and 6) were replaced with descriptive activity names (activity_labels)
+- The variable names were replaced with descriptive variable names (Acc=Accelerometer, Gyro=Gyroscope, BodyBody=Body, Mag=Magnitude, ^t=Time, ^f=Frequency, tBody=TimeBody, angle=Angle, mean=Mean, std=Std, dots were removed)
+- The final data set was created with the average of each variable for each activity and each subject (tidyDataAverage: 180 obs. of 88 variables)
+- tidyDataAverage was written to a textfile: run_analysis.R.txt (see repository)
 
 
 <b>Data</b><BR>
 The tidyDataAverage.txt data file is a text file, with space-separated values. The first row contains the names of the variables.
-
-
 
 
 <b>Variables</b><BR>
