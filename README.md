@@ -5,7 +5,7 @@ The purpose of this project is to demonstrate the ability to collect, work with,
 The repository contains the following files:
 - README.md, which provides an overview of the data set and how it was created,
 - run_analysis.R, the R script that was used to create the data set,
-- tidy_data.txt, the tidy data set in txt-format,
+- tidyDataAverage.txt, the tidy data set in txt-format,
 - CodeBook.md, which describes the data, variables and transformations used to generate the data,
 
 <b>Data Set Information </b><BR>
