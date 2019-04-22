@@ -29,6 +29,7 @@ The tidyDataAverage.txt data file is a text file, with space-separated values. T
  activity: Factor with 6 levels: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING<BR>
  
 <i>All features</i><BR>
+<font-size: 8px>
  $ subjectId                                      : int  1 1 1 1 1 1 2 2 2 2 ...<BR>
  $ activity                                       : Factor w/ 6 levels "LAYING","SITTING",..: 1 2 3 4 5 6 1 2 3 4 ...<BR>
  $ TimeBodyAccelerometerMeanX                     : num  0.222 0.261 0.279 0.277 0.289 ...<BR>
