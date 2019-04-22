@@ -1,4 +1,4 @@
-## 1. Checking if data set exists and if not download and unzip file (in working directory).
+## 1. Check if data set exists and if not download and unzip file (in working directory).
 filename <- "getdata-projectfiles-UCI HAR Dataset.zip"
 
 # Checking if file is already downloaded
@@ -7,7 +7,7 @@ if (!file.exists(filename)){
         download.file(fileUrl, filename, method="curl")
 }  
 
-# Checking if data set exists and if not unzip file 
+# Checking if datasset exists and if not unzip file 
 if (!file.exists("UCI HAR Dataset")) { 
         unzip(filename) 
 }
@@ -65,8 +65,13 @@ names(tidyDataMeanStd)<-gsub("^t", "Time", names(tidyDataMeanStd))
 names(tidyDataMeanStd)<-gsub("^f", "Frequency", names(tidyDataMeanStd))
 names(tidyDataMeanStd)<-gsub("tBody", "TimeBody", names(tidyDataMeanStd))
 names(tidyDataMeanStd)<-gsub("angle", "Angle", names(tidyDataMeanStd))
+names(tidyDataMeanStd)<-gsub("mean", "Mean", names(tidyDataMeanStd))
+names(tidyDataMeanStd)<-gsub("std", "Std", names(tidyDataMeanStd))
+names(tidyDataMeanStd)<-gsub(".", "", names(tidyDataMeanStd),fixed = TRUE)
+
 colnames(tidyDataMeanStd)
 View(tidyDataMeanStd)
+
 
 ## 6. Creating a second, independent tidy data set from dataset in step 4with the average.
 # of each variable for each activity and each subject
@@ -76,3 +81,4 @@ str(tidyDataAverage)
 
 ## 7. Writing second tidy data set in txt file.
 write.table(tidyDataAverage, "tidyDataAverage.txt", row.name=FALSE)
+
